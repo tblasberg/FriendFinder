@@ -1,0 +1,1 @@
+//create an array with objects for dummy users
