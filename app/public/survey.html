@@ -1,18 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <title>Welcome to survey</title>
 </head>
-<body>
-    <div class="">This is working - Survey html</div>
-    
 
+<body>
+
+    <div class="container">
+        <br>
+        <div class="row">
+            <form>
+                <div class="col">
+                    <label for="nameInput">What is your name?</label>
+                    <input id="name" type="text" class="form-control" placeholder="Name">
+                </div>
+                <br>
+                <div class="col">
+                    <label for="nameInput">Link to Photo Image</label>
+                    <input id="photo" type="text" class="form-control" placeholder="URL to your photo">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Your mind is always buzzing with unexplored ideas and
+                        plans.</label>
+                    <select id="q1" class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Generally speaking, you rely more on your experience than
+                        your
+                        imagination.</label>
+                    <select id="q2" class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">You find it easy to stay relaxed and focused even when there
+                        is
+                        some pressure.</label>
+                    <select id="q3" class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">You rarely do something just out of sheer curiosity.</label>
+                    <select id="q4" class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">People can rarely upset you.</label>
+                    <select id="q5" class="form-control" id="exampleFormControlSelect1">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <button id="submit" class="btn btn-primary" type="submit">Submit it!</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- //the on click will be on the submit button -->
+    <script src="https://code.jquery.com/jquery.js"></script>
 
     <script>
-    //the on click will be on the submit button
+
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            var newFriend = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
+                q1: $("#q1").val().trim(),
+                q2: $("#q2").val().trim(),
+                q3: $("#q3").val().trim(),
+                q4: $("#q4").val().trim(),
+                q5: $("#q5").val().trim()
+            }
+            console.log(newFriend)
+        })
     </script>
+
 </body>
+
 </html>
