@@ -1,7 +1,11 @@
 var express = require("express");
+// var cors = require('cors')
 var app = express();
-var bodyParser = require('body-parser');
 
+var path = require("path");
+
+// app.use(cors())
+// var bodyParser = require('body-parser');
 
 var PORT = process.env.PORT || 3000;
 
@@ -12,10 +16,10 @@ app.use(express.json());
 
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+// app.use(bodyParser.urlencoded({ extended: false }))
  
 // parse application/json
-app.use(bodyParser.json())
+// app.use(bodyParser.json())
  
 
 
